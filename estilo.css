@@ -30,6 +30,9 @@
 
     main{
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 .cabecalho-link{
@@ -38,6 +41,38 @@
 }
 
 h1 {
-    background-color: rgba(117, 213, 230, 0.897);
+    background-color: rgba(85, 178, 194, 0.897);
     padding: 15px 25px;
+}
+
+footer{
+    background-color: #53a5a5b2;
+    padding: 15px 25px;
+    color: rgb(0, 0, 0);
+}
+.cartao-interno{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.cartao:hover .cartao-interno{
+    transform: rotateY(180deg);
+}
+
+
+.cartao-frente, .cartao-verso{
+    position: absolute;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(0,0,0,0.15);
+    backface-visibility: hidden;
+}
+
+.cartao-verso{
+    transform: rotatey(180deg);
+}
+
+section{
+    display: flex;
+    gap: 16px;
 }
